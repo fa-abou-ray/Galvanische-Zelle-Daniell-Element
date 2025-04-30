@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galvanische Zelle: Daniell-Element</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="simWrapper">
+
+    <!-- linke Seitenleiste: Buttons, Metall-Selects, Speed-Slider -->
+    <div class="sideControls">
+
+      <!-- 1) Bedien-Buttons -->
+      <button id="startSimulation">▶ Start</button>
+      <button id="stopSimulation">⏸ Stop</button>
+      <button id="resetButton">↺ Reset</button>
+
+      <!-- 2) Metall-Auswahl -->
+      <div class="metalSelects" style="margin-top:12px;">
+        <label for="leftElectrode">Linke Elektrode:</label>
+        <select id="leftElectrode"></select>
+
+        <label for="rightElectrode" style="margin-top:8px;">Rechte Elektrode:</label>
+        <select id="rightElectrode"></select>
+      </div>
+
+      <!-- 3) Geschwindigkeitsslider -->
+      <div class="speedControl" style="margin-top:12px;">
+        <label for="speedSlider">Geschwindigkeit:</label><br>
+        <input type="range" id="speedSlider" min="0.5" max="3" step="0.1" value="1">
+        <span id="speedValue">1.0×</span>
+      </div>
+
+    </div>
+
+    <!-- rechte Seite: Canvas -->
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
