@@ -1,0 +1,92 @@
+/* ---------- Layout-Basis ---------- */
+:root{
+    --canvas-w : 800px;   /* Breite des Canvas – ändern? einfach hier */
+    --panel-w  : 110px;   /* Breite der Seitenleiste */
+    --gap      : 20px;    /* Abstand zwischen Panel & Canvas */
+    --total-w  : calc(var(--canvas-w) + var(--panel-w) + var(--gap));
+  }
+  
+  /* Body zentriert alles und entfernt Standard-Ränder */
+  html,body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;   /* alles horizontal zentriert */
+    background: #f7f7f7;       /* hellgrauer Hintergrund – optional */
+  }
+  
+  /* Wrapper: Seitenleiste + Canvas nebeneinander, feste Gesamtbreite */
+  .simWrapper {
+    width: var(--total-w);
+    display: flex;
+    align-items: center;        /* ← zentriert sideControls mittig zur Canvas-Höhe */
+    gap: var(--gap);
+  }
+  
+  /* Seitenleiste stapelt Selects + Buttons */
+  .sideControls{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Canvas darf nicht skaliert werden */
+  #myCanvas{
+    width : var(--canvas-w);
+    height: 600px;             /* wie im HTML-Attribut */
+    display: block;
+  }
+  
+  /* Dropdown-Bereich in der Seitenleiste */
+  .metalSelects{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  
+  /* Einheitliche Breite für Selects + Buttons */
+  .metalSelects select,
+  .sideControls button{
+    width: var(--panel-w);
+  }
+  
+  /* --- Fallback für sehr kleine Fenster (<930 px) ------------- */
+  @media (max-width: 930px){
+    .simWrapper{
+      flex-direction: column;
+      align-items: center;
+    }
+    .sideControls{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 16px;
+    }
+  }
+  /* in style.css */
+html, body {
+    /* statt weiß #fff also z.B. Pastell-Türkis */
+    background-color: #e0f7fa;  
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
