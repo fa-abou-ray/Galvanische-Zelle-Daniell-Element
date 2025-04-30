@@ -1,0 +1,1 @@
+# Galvanische-Zelle-Daniell-Element
